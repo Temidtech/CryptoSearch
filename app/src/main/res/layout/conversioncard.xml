@@ -1,0 +1,85 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cv"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/card_margin"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_currency_radius">
+
+        <LinearLayout
+            android:id="@+id/itemcard"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Bthumbnail"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/currencyimage_height"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:paddingBottom="@dimen/paddingbottom"
+                android:scaleType="fitCenter" />
+            <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                android:id="@+id/cryptocurrency"
+                android:text="1 BTC"
+                android:textSize="@dimen/card_textsize"
+                android:gravity="center"
+                android:typeface="sans"
+                android:textStyle="normal|bold"
+                android:paddingBottom="@dimen/paddingbottom"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Bthumbnail"
+                android:textColor="@android:color/black" />
+
+            <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                android:id="@+id/textViewBold2"
+                android:text="="
+                android:textSize="@dimen/card_textsize"
+                android:fontFamily="sans-serif"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:typeface="sans"
+                android:textStyle="normal|bold"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Bthumbnail"
+                android:textColor="@color/colorPrimary" />
+
+            <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                android:id="@+id/worldcurrency"
+                android:text="234,000 NGN"
+                android:typeface="sans"
+                android:textStyle="normal|bold"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="@dimen/paddingbottom"
+                android:textSize="@dimen/card_textsize"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Bthumbnail"
+                android:textColor="@android:color/black" />
+            <com.swiftsynq.charis.cryptosearch.CustomViews.CustomButton
+                android:text="@string/remove"
+                android:layout_height="40dp"
+                android:drawableLeft="@drawable/ic_backspace_black_24dp"
+                android:layout_width="match_parent"
+                android:textSize="15sp"
+                android:background="@drawable/custombutton"
+                android:textColor="@android:color/white"
+                android:id="@+id/removebtn" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

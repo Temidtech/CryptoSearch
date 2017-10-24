@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name">CryptoSearch</string>
+    <string name="action_settings">Settings</string>
+    <string name="coinsErrorMsg">Unable to fetch coins !You are not connected to the Internet.</string>
+    <string name="currencyPrompt">Currency</string>
+    <string name="cryptoPrompt">CryptoCurrency</string>
+    <string name="nointernet">No Internet Connection!</string>
+    <string name="Exnotification">Hey! You can find out how much your cryptocurrency is worth.</string>
+    <string name="welcomenotification">Get latest exchange rate between cryptocurrencies (BTC
+and ETH) and 20 major world currencies!</string>
+    <string name="currencyrate">Get Current Rate</string>
+    <string name="remove">Remove</string>
+    <string-array name="CryptoCurrencies">
+        <item>BTC</item>
+        <item>ETH</item>
+    </string-array>
+    <string-array name="worldcurrencies">
+        <item>NGN</item>
+        <item>CAD</item>
+        <item>USD</item>
+        <item>EUR</item>
+        <item>AUD</item>
+        <item>RUB</item>
+        <item>SEK</item>
+        <item>CHF</item>
+        <item>GBP</item>
+        <item>CNY</item>
+        <item>GIP</item>
+        <item>ZAR</item>
+        <item>TWD</item>
+        <item>UAH</item>
+        <item>GHS</item>
+        <item>ETB</item>
+        <item>TND</item>
+        <item>RSD</item>
+        <item>NZD</item>
+        <item>JMD</item>
+    </string-array>
+</resources>

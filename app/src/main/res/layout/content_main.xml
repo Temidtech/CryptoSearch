@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.swiftsynq.charis.cryptosearch.Activity.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:id="@+id/avilyt"
+        android:layout_height="match_parent" android:visibility="visible" android:gravity="center" android:orientation="horizontal" android:layout_weight="1"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/avi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:indicatorName="BallPulseIndicator"
+            app:indicatorColor="#EF643D"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true" />
+    </LinearLayout>
+    <include layout="@layout/addlayout" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:id="@+id/nointernetlyt"
+        android:layout_height="match_parent" android:visibility="gone" android:orientation="vertical">
+        <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+            android:layout_width="wrap_content" android:layout_weight="1" android:layout_gravity="center_horizontal" android:id="@+id/notifytxt" android:textColor="@color/colorPrimaryDark" android:textSize="19dp" android:text="@string/nointernet" android:gravity="center"
+            android:layout_height="wrap_content" />
+
+
+        <com.swiftsynq.charis.cryptosearch.CustomViews.CustomButton
+            android:text="Try Again"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="#fff"
+            android:id="@+id/tryagainbtn"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/custombutton"
+
+            />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" android:visibility="gone" android:id="@+id/homelayout" android:orientation="vertical">
+        <android.support.v7.widget.CardView
+            android:layout_weight="1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="5dp"
+            android:id="@+id/BTitemcard"
+        android:layout_margin="@dimen/card_margin"
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:elevation="3dp"
+        card_view:cardCornerRadius="@dimen/card_currency_radius">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/Bthumbnail"
+                android:layout_width="match_parent"
+                android:src="@drawable/logo"
+                android:layout_marginTop="10dp"
+                android:layout_height="100dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:paddingBottom="@dimen/paddingbottom"
+                android:scaleType="fitCenter" />
+
+            <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                android:id="@+id/BcoinName"
+                android:text="ETH"
+                android:typeface="sans"
+                android:textStyle="normal|bold"
+                android:fontFamily="sans-serif"
+                android:paddingBottom="@dimen/paddingbottom"
+                android:textSize="@dimen/card_textsize"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Bthumbnail"
+                android:textColor="@android:color/black" />
+
+            <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                android:id="@+id/BcoinFullName"
+                android:text="Ethereum  (ETH)"
+                android:textSize="25sp"
+                android:gravity="center"
+                android:typeface="sans"
+                android:textStyle="normal|bold"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:fontFamily="sans-serif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Bthumbnail"
+                android:textColor="@android:color/black" />
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+        <android.support.v7.widget.CardView
+            android:id="@+id/WCitemcard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="5dp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/card_margin"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:elevation="3dp"
+            card_view:cardCornerRadius="@dimen/card_currency_radius">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:src="@drawable/logo"
+                    android:layout_height="100sp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:clickable="true"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="@dimen/paddingbottom"
+                    android:scaleType="fitCenter"
+                    android:id="@+id/EThumbnail" />
+
+                <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                    android:text="ETH"
+                    android:typeface="sans"
+                    android:textStyle="normal|bold"
+                    android:fontFamily="sans-serif"
+                    android:paddingBottom="@dimen/paddingbottom"
+                    android:textSize="@dimen/card_textsize"
+                    android:gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Bthumbnail"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/EcoinSymbol" />
+
+                <com.swiftsynq.charis.cryptosearch.CustomViews.TextViewBold
+                    android:text="Ethereum  (ETH)"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:typeface="sans"
+                    android:textStyle="normal|bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:fontFamily="sans-serif"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/Bthumbnail"
+                    android:textColor="@android:color/black"
+                    android:id="@+id/EcoinFullName" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="vertical" />
+
+
+</RelativeLayout>

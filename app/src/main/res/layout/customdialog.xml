@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/cryptospinner"
+        android:entries="@array/CryptoCurrencies"
+        style="@style/spinner_style"
+        android:prompt="@string/cryptoPrompt"
+        android:background="@drawable/gradient_spinner"  />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/currencyspinner"
+        android:entries="@array/worldcurrencies"
+        style="@style/spinner_style"
+        android:prompt="@string/currencyPrompt"
+        android:background="@drawable/gradient_spinner" />
+    <LinearLayout
+        android:layout_width="match_parent" android:id="@+id/dialogavilyt"
+        android:layout_height="wrap_content" android:visibility="gone" android:gravity="center" android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+        <com.wang.avi.AVLoadingIndicatorView
+            android:id="@+id/dialogavi"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:indicatorName="BallPulseIndicator"
+            app:indicatorColor="@color/colorPrimary"/>
+    </LinearLayout>
+    <com.swiftsynq.charis.cryptosearch.CustomViews.CustomButton
+        android:text="@string/currencyrate"
+        style="@style/button_style"
+        android:background="@drawable/custombutton"
+        android:textColor="@android:color/white"
+        android:id="@+id/currencyratebtn" />
+
+</LinearLayout>
